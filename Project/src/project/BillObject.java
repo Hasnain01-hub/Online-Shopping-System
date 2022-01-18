@@ -7,35 +7,38 @@ package project;
 
 /**
  *
- * @author varun02
+ * @author Void
  */
 public class BillObject {
     private int id;
     private String uname;
-    private int price;
-    private String d;
+    private int bill;
+    private String date;
 
-    public BillObject(int id, String uname, int price, String date) {
+   public  BillObject( String uname, int bill, String date) {
 //        this.id = id;
         this.uname = uname;
-        this.price = price;
-//        this.bill = bill;
-        this.d = d;
+        this.bill = bill;
+        this.date = date;
     }
 
-    BillObject(String string, int aInt, String string0) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
- 
-
-//    public int getId() {
-//        return id;
+//    BillObject(String string, int aInt, String string0) {
+//         //To change body of generated methods, choose Tools | Templates.
 //    }
+//    
 //
-//    public void setId(int id) {
-//        this.id = id;
+//    BillObject(String string, int aInt, String string0) {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 //    }
+// 
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getUname() {
         return uname;
@@ -46,19 +49,19 @@ public class BillObject {
     }
 
     public int getBill() {
-        return price;
+        return bill;
     }
 
     public void setBill(int bill) {
-        this.price = price;
+        this.bill = bill;
     }
 
     public String getDate() {
-        return d;
+        return date;
     }
 
     public void setDate(String date) {
-        this.d = d;
+        this.date = date;
     }
     
     

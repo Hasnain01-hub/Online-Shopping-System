@@ -618,55 +618,6 @@ public class AdminPanel extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void billingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_billingButtonActionPerformed
-        // TODO add your handling code here:
-            cardAdminParentLayout.removeAll();
-            cardAdminParentLayout.add(billingPanel);
-            cardAdminParentLayout.repaint();
-            cardAdminParentLayout.revalidate();
-            
-            DefaultTableModel model =  (DefaultTableModel) billingTable.getModel();
-            model.setRowCount(0);
-         
-            Object[] data = new Object[4];
-            ArrayList<BillObject> list = new ArrayList<>();
-            list = BillingDB.billlings();
-        
-        for(int i=0; i<list.size(); i++){
-            data[0] = i+1;
-            data[1] = list.get(i).getUname();
-            data[2] = list.get(i).getBill();
-            data[3] = list.get(i).getDate();
-            
-            model.addRow(data);
-            billingTable.setRowHeight(20);
-        }
-    }//GEN-LAST:event_billingButtonActionPerformed
-
-    private void billingButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_billingButtonMouseReleased
-        // TODO add your handling code here:
-        billingButton.setBackground(new Color(0, 150, 136));
-    }//GEN-LAST:event_billingButtonMouseReleased
-
-    private void billingButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_billingButtonMousePressed
-        // TODO add your handling code here:
-        billingButton.setBackground(new Color(0, 77, 64));
-    }//GEN-LAST:event_billingButtonMousePressed
-
-    private void billingButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_billingButtonMouseExited
-        // TODO add your handling code here:
-        billingButton.setBackground(new Color(0, 150, 136));
-    }//GEN-LAST:event_billingButtonMouseExited
-
-    private void billingButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_billingButtonMouseEntered
-        // TODO add your handling code here:
-        billingButton.setBackground(new Color(0, 137, 123));
-    }//GEN-LAST:event_billingButtonMouseEntered
-
-    private void billingButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_billingButtonMouseClicked
-
-    }//GEN-LAST:event_billingButtonMouseClicked
-
     private void checkStockButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkStockButtonActionPerformed
             cardAdminParentLayout.removeAll();
             cardAdminParentLayout.add(checkStockPanel);
@@ -922,6 +873,55 @@ public class AdminPanel extends javax.swing.JFrame {
         // TODO add your handling code here:
         BillingDB.deleteBillings();
     }//GEN-LAST:event_delEntry1ActionPerformed
+
+    private void billingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_billingButtonActionPerformed
+        // TODO add your handling code here:
+        cardAdminParentLayout.removeAll();
+        cardAdminParentLayout.add(billingPanel);
+        cardAdminParentLayout.repaint();
+        cardAdminParentLayout.revalidate();
+
+        DefaultTableModel model =  (DefaultTableModel) billingTable.getModel();
+        model.setRowCount(0);
+
+        Object[] data = new Object[4];
+        ArrayList<BillObject> list = new ArrayList<>();
+        list = BillingDB.billlings();
+
+        for(int i=0; i<list.size(); i++){
+            data[0] = i+1;
+            data[1] = list.get(i).getUname();
+            data[2] = list.get(i).getBill();
+            data[3] = list.get(i).getDate();
+
+            model.addRow(data);
+            billingTable.setRowHeight(20);
+        }
+    }//GEN-LAST:event_billingButtonActionPerformed
+
+    private void billingButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_billingButtonMouseReleased
+        // TODO add your handling code here:
+        billingButton.setBackground(new Color(0, 150, 136));
+    }//GEN-LAST:event_billingButtonMouseReleased
+
+    private void billingButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_billingButtonMousePressed
+        // TODO add your handling code here:
+        billingButton.setBackground(new Color(0, 77, 64));
+    }//GEN-LAST:event_billingButtonMousePressed
+
+    private void billingButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_billingButtonMouseExited
+        // TODO add your handling code here:
+        billingButton.setBackground(new Color(0, 150, 136));
+    }//GEN-LAST:event_billingButtonMouseExited
+
+    private void billingButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_billingButtonMouseEntered
+        // TODO add your handling code here:
+        billingButton.setBackground(new Color(0, 137, 123));
+    }//GEN-LAST:event_billingButtonMouseEntered
+
+    private void billingButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_billingButtonMouseClicked
+
+    }//GEN-LAST:event_billingButtonMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
